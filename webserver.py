@@ -7,7 +7,7 @@ serverSocket=socket(AF_INET,SOCK_STREAM)
 serverSocket.setsockopt(SOL_SOCKET,SO_REUSEADDR,1)
 serverSocket.bind((address,port))
 serverSocket.listen(10)
-print "The server is ready to use"
+print "The server is ready to be used"
 while(1):
 	connectionSocket,addr=serverSocket.accept()
 	pid=os.fork()
