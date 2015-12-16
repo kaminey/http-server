@@ -1,10 +1,11 @@
 from socket import *
 from deal_with_client import deal_with_client
 import os
+address="127.0.0.1"
 port=12000
 serverSocket=socket(AF_INET,SOCK_STREAM)
 serverSocket.setsockopt(SOL_SOCKET,SO_REUSEADDR,1)
-serverSocket.bind(("192.168.43.38",port))
+serverSocket.bind((address,port))
 serverSocket.listen(10)
 print "The server is ready to use"
 while(1):
